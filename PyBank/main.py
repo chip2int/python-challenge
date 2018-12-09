@@ -41,4 +41,12 @@ print(f"Total: ${sum(profits_losses)}")
 print(f"Greatest Increase in Profits: {dates[max_change_index + 1]} (${max_change})")
 print(f"Greatest Decrease in Profits: {dates[min_change_index + 1]} (${min_change})")
 
-
+f = open("financial_results.txt", "a")
+f.write("Financial Analysis\n")
+f.write("--------------------------------\n")
+f.write(f"Number of entries: {len(dates)}\n")
+f.write(f"Average Change: {average_change}\n")
+f.write(f"Total: ${sum(profits_losses)}\n")
+f.write(f"Greatest Increase in Profits: {dates[max_change_index + 1]} (${max_change})\n")
+f.write(f"Greatest Decrease in Profits: {dates[min_change_index + 1]} (${min_change})\n")
+f.close()
